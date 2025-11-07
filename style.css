@@ -5,6 +5,8 @@
 }
 
 body{
+    height: 100%;
+    min-height: 100vh;
     background: linear-gradient(to top,rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(img1.jpg);
     background-position: center;
     background-size: cover;
@@ -40,7 +42,7 @@ body{
 
 .menu{
     position: absolute;
-    width: 60vh;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -95,11 +97,11 @@ body{
 }
 
 .content{
-    width: 1200px;
-    height: auto;
+    max-width: 1200px;
+    width: auto;
     top: auto;
     color: whitesmoke;
-    margin: 100px;
+    margin: 80px;
     position: relative;
 }
 
@@ -134,3 +136,62 @@ body{
     opacity: 0.8;
     margin: 30px 0;
 }
+
+@media (max-width: 900px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .icon {
+        position: static;
+        text-align: center;
+    }
+
+    .menu {
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .search {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .searchinput {
+        width: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .searchinput {
+        width: 150px;
+        height: 35px;
+    }
+
+    .searchbutton {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+}
+
